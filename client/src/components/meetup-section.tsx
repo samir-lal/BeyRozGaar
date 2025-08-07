@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Users, Send, Clock } from "lucide-react";
+import { Calendar, MapPin, Users, Send, Clock, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -19,6 +19,7 @@ export default function MeetupSection() {
     phone: "",
     experience: ""
   });
+  const [quickEmail, setQuickEmail] = useState("");
 
   const signupMutation = useMutation({
     mutationFn: async (data: z.infer<typeof insertMeetupSignupSchema>) => {
@@ -61,6 +62,57 @@ export default function MeetupSection() {
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const quickSignupMutation = useMutation({
+    mutationFn: async (email: string) => {
+      const response = await apiRequest("POST", "/api/meetup-signup", {
+        name: "Quick Signup",
+        email: email,
+        phone: "",
+        experience: "Quick signup for meetup"
+      });
+      return response.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "You're registered! 🎉",
+        description: "We'll send you the Zoom link at the provided email address.",
+      });
+      setQuickEmail("");
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Registration failed",
+        description: error.message || "Please try again or use the full form below.",
+        variant: "destructive",
+      });
+    }
+  });
+
+  const handleQuickSignup = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!quickEmail) {
+      toast({
+        title: "Email required",
+        description: "Please enter your email address to receive the Zoom link.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(quickEmail)) {
+      toast({
+        title: "Invalid email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    quickSignupMutation.mutate(quickEmail);
   };
 
   return (
@@ -115,6 +167,30 @@ export default function MeetupSection() {
                   <span>Required: A Coffee or Tea and simply be YOU</span>
                 </div>
               </div>
+              
+              <form onSubmit={handleQuickSignup} className="mt-4 flex gap-2">
+                <Input
+                  type="email"
+                  value={quickEmail}
+                  onChange={(e) => setQuickEmail(e.target.value)}
+                  placeholder="Enter email for Zoom link"
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-warm-orange focus:border-warm-orange transition-colors"
+                />
+                <Button
+                  type="submit"
+                  disabled={quickSignupMutation.isPending}
+                  className="gradient-warm text-white px-4 py-2 rounded-lg font-medium hover:shadow-md transition-all duration-200 disabled:opacity-50"
+                >
+                  {quickSignupMutation.isPending ? (
+                    <Clock className="animate-spin" size={16} />
+                  ) : (
+                    <>
+                      <Mail className="mr-1" size={16} />
+                      Join
+                    </>
+                  )}
+                </Button>
+              </form>
             </div>
           </motion.div>
           
