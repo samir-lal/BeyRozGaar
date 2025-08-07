@@ -39,9 +39,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const message = await storage.createContactMessage(messageData);
       
       // Send welcome email based on message type
-      if (messageData.message.toLowerCase().includes('community') || messageData.subject.toLowerCase().includes('join')) {
+      if (messageData.message.toLowerCase().includes('community')) {
         await sendCommunityWelcomeEmail(messageData.email);
-      } else if (messageData.message.toLowerCase().includes('story') || messageData.subject.toLowerCase().includes('story')) {
+      } else if (messageData.message.toLowerCase().includes('story')) {
         await sendStoryWelcomeEmail(messageData.email, messageData.name);
       } else {
         // For general inquiries, send community welcome
