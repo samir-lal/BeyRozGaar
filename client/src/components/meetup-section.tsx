@@ -165,7 +165,7 @@ export default function MeetupSection() {
               
               <div className="space-y-4 mb-6">
                 <div className="flex items-center bg-gradient-to-r from-warm-orange/15 to-deep-coral/10 p-4 rounded-xl border border-warm-orange/20 shadow-sm">
-                  <div className="w-10 h-10 bg-gradient-to-r from-warm-orange to-deep-coral rounded-full flex items-center justify-center mr-4 shadow-lg">
+                  <div className="w-10 h-10 bg-warm-orange rounded-full flex items-center justify-center mr-4 shadow-lg">
                     <Calendar className="text-white" size={18} />
                   </div>
                   <div>
@@ -175,7 +175,7 @@ export default function MeetupSection() {
                 </div>
                 
                 <div className="flex items-center bg-gradient-to-r from-warm-teal/15 to-sage-green/10 p-4 rounded-xl border border-warm-teal/20 shadow-sm">
-                  <div className="w-10 h-10 bg-gradient-to-r from-warm-teal to-sage-green rounded-full flex items-center justify-center mr-4 shadow-lg">
+                  <div className="w-10 h-10 bg-warm-teal rounded-full flex items-center justify-center mr-4 shadow-lg">
                     <Video className="text-white" size={18} />
                   </div>
                   <div>
@@ -185,7 +185,7 @@ export default function MeetupSection() {
                 </div>
                 
                 <div className="flex items-center bg-gradient-to-r from-golden-yellow/15 to-sunshine/10 p-4 rounded-xl border border-golden-yellow/20 shadow-sm">
-                  <div className="w-10 h-10 bg-gradient-to-r from-golden-yellow to-sunshine rounded-full flex items-center justify-center mr-4 shadow-lg">
+                  <div className="w-10 h-10 bg-golden-yellow rounded-full flex items-center justify-center mr-4 shadow-lg">
                     <Coffee className="text-white" size={18} />
                   </div>
                   <div>
