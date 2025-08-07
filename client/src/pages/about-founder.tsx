@@ -6,52 +6,49 @@ import { useLocation } from 'wouter';
 export default function AboutFounder() {
   const [, setLocation] = useLocation();
 
-  const experiences = [
+  const serviceAreas = [
     {
-      company: "Karl Storz (Medical Devices)",
-      role: "Product Leader",
-      period: "May 2021 - Present",
+      title: "Idea to MVP Development",
+      description: "Transform your concept into a market-ready minimum viable product",
       highlights: [
-        "Launched multiple medical device products from concept to market",
-        "Built product roadmaps that delivered $50M+ in revenue growth",
-        "Created MVPs that transformed customer feedback into successful products"
+        "Rapid prototyping and validation in 4-6 weeks",
+        "Customer feedback integration and iterative improvements",
+        "Technical roadmap creation for scalable growth"
       ],
       icon: Globe,
       gradient: "from-warm-teal to-sage-green"
     },
     {
-      company: "Amgen (Biotechnology)",
-      role: "Sr. Product Leader", 
-      period: "May 2021 - Present",
+      title: "Product Launch Strategy",
+      description: "End-to-end product launch from conception to market success",
       highlights: [
-        "Launched 5+ product lines from ideation to market success",
-        "Built customer-centric products that solved real healthcare problems",
-        "Created proof-of-concepts that secured millions in funding"
+        "Go-to-market strategies that generate immediate traction",
+        "Revenue optimization and monetization models", 
+        "Market positioning and competitive analysis"
       ],
       icon: Users,
       gradient: "from-warm-orange to-deep-coral"
     },
     {
-      company: "Product Academy",
-      role: "Co-Founder",
-      period: "June 2020 - Present", 
+      title: "Startup Mentoring & Consulting",
+      description: "One-on-one guidance for entrepreneurs and product teams",
       highlights: [
-        "Helps entrepreneurs turn ideas into successful MVP launches",
-        "Mentored 100+ founders in product development strategies",
-        "Created frameworks for rapid idea-to-market execution"
+        "Product strategy sessions and roadmap development",
+        "Investor pitch preparation and fundraising support",
+        "Team building and product culture development"
       ],
       icon: BookOpen,
       gradient: "from-golden-yellow to-sunshine"
     }
   ];
 
-  const achievements = [
-    "Launched 20+ successful products from idea to market in 5 years",
-    "Built MVPs that generated $100M+ in total revenue across industries",
-    "Wall Street product experience: HSBC, Morgan Stanley, Deutsche Bank",
-    "Published author and speaker on Product Development and MVP strategies",
-    "Mentored 100+ entrepreneurs in turning ideas into profitable products",
-    "Expert in rapid prototyping and customer-validated product launches"
+  const results = [
+    "20+ successful product launches from idea to market",
+    "$100M+ in total revenue generated across all products",
+    "15+ years of product experience across finance, healthcare, and tech",
+    "100+ entrepreneurs mentored in product development",
+    "Published author and speaker on MVP strategies",
+    "4-6 week average time from concept to MVP launch"
   ];
 
   return (
@@ -131,7 +128,7 @@ export default function AboutFounder() {
             </div>
           </motion.div>
 
-          {/* Experience Section */}
+          {/* Services Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -139,11 +136,15 @@ export default function AboutFounder() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="font-inter text-3xl font-bold text-soft-charcoal text-center mb-12">
-              Professional Journey
+            <h2 className="font-inter text-3xl font-bold text-soft-charcoal text-center mb-6">
+              How I Can Help Bring Your Ideas to Life
             </h2>
+            <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+              With over 15 years of product experience across Wall Street, healthcare, and startups, 
+              I've helped launch products that generated over $100M in revenue. Here's how we can work together:
+            </p>
             <div className="grid gap-8">
-              {experiences.map((exp, index) => (
+              {serviceAreas.map((service, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -30 }}
@@ -153,21 +154,16 @@ export default function AboutFounder() {
                   className="bg-white/70 backdrop-blur-sm p-6 rounded-2xl border border-warm-orange/20 shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <div className="flex items-start gap-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${exp.gradient} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}>
-                      <exp.icon className="text-white" size={24} />
+                    <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}>
+                      <service.icon className="text-white" size={24} />
                     </div>
                     <div className="flex-1">
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                        <div>
-                          <h3 className="font-inter text-xl font-bold text-soft-charcoal">{exp.company}</h3>
-                          <p className="text-warm-orange font-semibold">{exp.role}</p>
-                        </div>
-                        <span className="text-sm text-gray-500 font-medium bg-gray-100 px-3 py-1 rounded-full">
-                          {exp.period}
-                        </span>
+                      <div className="mb-4">
+                        <h3 className="font-inter text-xl font-bold text-soft-charcoal mb-2">{service.title}</h3>
+                        <p className="text-warm-orange font-medium mb-4">{service.description}</p>
                       </div>
                       <ul className="space-y-2">
-                        {exp.highlights.map((highlight, idx) => (
+                        {service.highlights.map((highlight, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-gray-600">
                             <div className="w-2 h-2 bg-warm-orange rounded-full mt-2 flex-shrink-0"></div>
                             <span>{highlight}</span>
@@ -181,7 +177,7 @@ export default function AboutFounder() {
             </div>
           </motion.div>
 
-          {/* Achievements Section */}
+          {/* Results Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -189,11 +185,14 @@ export default function AboutFounder() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="font-inter text-3xl font-bold text-soft-charcoal text-center mb-12">
-              Key Achievements
+            <h2 className="font-inter text-3xl font-bold text-soft-charcoal text-center mb-6">
+              Proven Results
             </h2>
+            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+              Numbers don't lie. Here's the impact I've made for clients and partners across industries:
+            </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {achievements.map((achievement, index) => (
+              {results.map((result, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -206,7 +205,7 @@ export default function AboutFounder() {
                     <div className="w-8 h-8 bg-gradient-to-r from-warm-orange to-deep-coral rounded-full flex items-center justify-center flex-shrink-0">
                       <Award className="text-white" size={14} />
                     </div>
-                    <p className="text-gray-700 leading-relaxed">{achievement}</p>
+                    <p className="text-gray-700 leading-relaxed font-medium">{result}</p>
                   </div>
                 </motion.div>
               ))}
