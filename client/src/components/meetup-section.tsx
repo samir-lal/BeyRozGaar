@@ -98,21 +98,21 @@ export default function MeetupSection() {
               <div className="flex items-center justify-between mb-4">
                 <h4 className="font-inter font-semibold text-soft-charcoal">Next Meetup</h4>
                 <div className="bg-sage-green text-white px-3 py-1 rounded-full text-sm">
-                  This Saturday
+                  Thursday
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="flex items-center text-gray-600">
                   <Calendar className="mr-3 text-warm-orange" size={18} />
-                  <span>Saturday, 2:00 PM - 4:00 PM</span>
+                  <span>Thursday, August 21st, 3:00 PM - 4:00 PM</span>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <MapPin className="mr-3 text-warm-orange" size={18} />
-                  <span>Local Community Center</span>
+                  <span>Zoom invite to be shared with those who register</span>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <Users className="mr-3 text-warm-orange" size={18} />
-                  <span>15+ people registered</span>
+                  <span>Required: A Coffee or Tea and simply be YOU</span>
                 </div>
               </div>
             </div>
@@ -143,13 +143,13 @@ export default function MeetupSection() {
               </div>
               
               <div>
-                <Label className="block text-sm font-medium text-gray-700 mb-2">Email Address</Label>
+                <Label className="block text-sm font-medium text-gray-700 mb-2">Email Address (for Zoom invite)</Label>
                 <Input 
                   type="email" 
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-warm-orange focus:border-warm-orange transition-colors" 
-                  placeholder="your@email.com" 
+                  placeholder="your@email.com - We'll send the Zoom link here" 
                   required
                 />
               </div>
