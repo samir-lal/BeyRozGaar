@@ -71,13 +71,13 @@ export default function ContactSection() {
     {
       icon: Phone,
       title: "Call Us", 
-      detail: "+91 98765 43210",
+      detail: "+1-310-869-5391",
       gradient: "gradient-teal"
     },
     {
       icon: MapPin,
       title: "Find Us",
-      detail: "Community Centers Across India",
+      detail: "Community Centers Across Globe",
       gradient: "gradient-sunshine"
     }
   ];
