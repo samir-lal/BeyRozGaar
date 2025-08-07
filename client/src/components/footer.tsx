@@ -32,7 +32,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-5 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-10 h-10 gradient-warm rounded-full flex items-center justify-center">
@@ -92,6 +92,28 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold text-lg mb-4 text-warm-orange">About Founder</h4>
+            <div className="bg-gradient-to-br from-warm-orange/10 to-warm-teal/10 p-4 rounded-xl border border-warm-orange/20">
+              <h5 className="font-semibold text-white mb-2">Sanjay Sahni</h5>
+              <p className="text-sm text-gray-300 leading-relaxed mb-3">
+                Product Leader transforming organizations globally. Co-founder of Product Academy, 
+                helping startups and Fortune 500 companies achieve agile transformation.
+              </p>
+              <div className="text-xs text-gray-400 space-y-1 mb-3">
+                <p>• Wall Street veteran: HSBC, Morgan Stanley</p>
+                <p>• Transformed struggling startups to success</p>
+                <p>• Published author & corporate speaker</p>
+                <p>• Expert in building empowered teams</p>
+              </div>
+              <div className="pt-2 border-t border-warm-orange/20">
+                <p className="text-xs text-warm-orange font-medium italic">
+                  "Empowering unlimited potential through authentic connections"
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         
