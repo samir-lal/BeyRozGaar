@@ -24,12 +24,12 @@ Preferred communication style: Simple, everyday language.
 - **Language**: TypeScript with ES modules
 - **API Design**: RESTful endpoints with JSON responses
 - **Validation**: Zod schemas shared between frontend and backend
-- **Storage**: In-memory storage with interface-based architecture for future database integration
+- **Storage**: PostgreSQL database with Drizzle ORM for persistent data storage
 - **Error Handling**: Centralized error middleware with proper HTTP status codes
 
 ### Data Storage Solutions
-- **Current**: MemStorage class implementing IStorage interface for development
-- **Planned**: PostgreSQL with Drizzle ORM (configuration already present)
+- **Current**: PostgreSQL database with Drizzle ORM (implemented August 7, 2025)
+- **Previous**: MemStorage class for development (replaced with database storage)
 - **Database Schema**: 
   - Users table for authentication
   - Meetup signups for community event registrations
