@@ -126,7 +126,7 @@ export default function MeetupSection() {
             viewport={{ once: true }}
           >
             <h2 className="font-inter text-3xl sm:text-4xl font-bold text-soft-charcoal mb-6">
-              Join Our चाय Coffee Meetups
+              Join Our चाय <span className="text-2xl">(chai)</span> Coffee Meetups
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Every week, we gather for meaningful conversations over warm beverages. 
@@ -154,7 +154,7 @@ export default function MeetupSection() {
                   </div>
                   <div>
                     <h4 className="font-inter text-xl font-bold text-soft-charcoal">Next Meetup</h4>
-                    <p className="text-sm text-warm-orange font-medium">Join our community गप-शप</p>
+                    <p className="text-sm text-warm-orange font-medium">Join our community गप-शप <span className="text-xs">(chitchat)</span></p>
                   </div>
                 </div>
                 <div className="bg-warm-orange text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-pulse">

@@ -29,7 +29,7 @@ export default function HeroSection() {
             
             <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
               You don't need to be intelligent or stupid, just simply be <strong>YOU</strong>. 
-              Let's explore new possibilities together over चाय और coffee.
+              Let's explore new possibilities together over चाय <span className="text-sm">(chai)</span> और coffee.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -38,7 +38,7 @@ export default function HeroSection() {
                 className="gradient-warm text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 <Users className="mr-2" size={20} />
-                Join Our गप-शप
+                Join Our गप-शप <span className="text-sm">(chitchat)</span>
               </Button>
               
               <Button 

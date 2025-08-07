@@ -22,7 +22,7 @@ export default function StoriesSection() {
       name: "Anjali K.",
       location: "Portland",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      story: "The गप-शप sessions over coffee became my weekly therapy. I found my voice and confidence here. Now I'm starting my own small business!",
+      story: "The गप-शप (chitchat) sessions over coffee became my weekly therapy. I found my voice and confidence here. Now I'm starting my own small business!",
       gradient: "from-golden-yellow/5 to-sunshine/5"
     }
   ];

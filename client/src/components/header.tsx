@@ -22,7 +22,7 @@ export default function Header() {
             </div>
             <div>
               <h1 className="font-inter text-2xl font-bold text-soft-charcoal">BeyRozGaar</h1>
-              <p className="text-xs text-gray-500 font-medium">बे-रोज़गार</p>
+              <p className="text-xs text-gray-500 font-medium">बे-रोज़गार <span className="text-xs">(unemployed)</span></p>
             </div>
           </div>
           

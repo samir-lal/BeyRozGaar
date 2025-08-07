@@ -40,7 +40,7 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="font-inter text-xl font-bold">BeyRozGaar</h3>
-                <p className="text-sm text-gray-400">बे-रोज़गार</p>
+                <p className="text-sm text-gray-400">बे-रोज़गार <span className="text-xs">(unemployed)</span></p>
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6">
