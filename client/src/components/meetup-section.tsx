@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Users, Send, Clock, Mail } from "lucide-react";
+import { Calendar, MapPin, Users, Send, Clock, Mail, Coffee, Video, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -146,51 +146,84 @@ export default function MeetupSection() {
               />
             </div>
             
-            <div className="bg-white p-6 rounded-2xl shadow-lg">
-              <div className="flex items-center justify-between mb-4">
-                <h4 className="font-inter font-semibold text-soft-charcoal">Next Meetup</h4>
-                <div className="bg-sage-green text-white px-3 py-1 rounded-full text-sm">
-                  Thursday
+            <div className="bg-gradient-to-br from-white to-warm-orange/5 p-8 rounded-3xl shadow-xl border border-warm-orange/20 hover:shadow-2xl transition-all duration-300">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 gradient-warm rounded-full flex items-center justify-center shadow-lg">
+                    <Coffee className="text-white" size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-inter text-xl font-bold text-soft-charcoal">Next Meetup</h4>
+                    <p className="text-sm text-warm-orange font-medium">Join our community गप-शप</p>
+                  </div>
                 </div>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center text-gray-600">
-                  <Calendar className="mr-3 text-warm-orange" size={18} />
-                  <span>Thursday, August 21st, 3:00 PM - 4:00 PM</span>
-                </div>
-                <div className="flex items-center text-gray-600">
-                  <MapPin className="mr-3 text-warm-orange" size={18} />
-                  <span>Zoom invite to be shared with those who register</span>
-                </div>
-                <div className="flex items-center text-gray-600">
-                  <Users className="mr-3 text-warm-orange" size={18} />
-                  <span>Required: A Coffee or Tea and simply be YOU</span>
+                <div className="bg-gradient-to-r from-sage-green to-warm-teal text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
+                  <Star className="inline mr-1" size={14} />
+                  This Thursday
                 </div>
               </div>
               
-              <form onSubmit={handleQuickSignup} className="mt-4 flex gap-2">
-                <Input
-                  type="email"
-                  value={quickEmail}
-                  onChange={(e) => setQuickEmail(e.target.value)}
-                  placeholder="Enter email for Zoom link"
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-warm-orange focus:border-warm-orange transition-colors"
-                />
-                <Button
-                  type="submit"
-                  disabled={quickSignupMutation.isPending}
-                  className="gradient-warm text-white px-4 py-2 rounded-lg font-medium hover:shadow-md transition-all duration-200 disabled:opacity-50"
-                >
-                  {quickSignupMutation.isPending ? (
-                    <Clock className="animate-spin" size={16} />
-                  ) : (
-                    <>
-                      <Mail className="mr-1" size={16} />
-                      Join
-                    </>
-                  )}
-                </Button>
-              </form>
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center bg-warm-orange/5 p-3 rounded-xl">
+                  <div className="w-8 h-8 bg-warm-orange/20 rounded-full flex items-center justify-center mr-3">
+                    <Calendar className="text-warm-orange" size={16} />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-soft-charcoal">Thursday, August 21st</p>
+                    <p className="text-sm text-gray-600">3:00 PM - 4:00 PM</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center bg-warm-teal/5 p-3 rounded-xl">
+                  <div className="w-8 h-8 bg-warm-teal/20 rounded-full flex items-center justify-center mr-3">
+                    <Video className="text-warm-teal" size={16} />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-soft-charcoal">Online via Zoom</p>
+                    <p className="text-sm text-gray-600">Link shared after registration</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center bg-golden-yellow/5 p-3 rounded-xl">
+                  <div className="w-8 h-8 bg-golden-yellow/20 rounded-full flex items-center justify-center mr-3">
+                    <Coffee className="text-golden-yellow" size={16} />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-soft-charcoal">Bring Your Favorite Beverage</p>
+                    <p className="text-sm text-gray-600">Coffee, Tea, or anything that makes you comfortable</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-white/70 backdrop-blur-sm p-4 rounded-2xl border border-warm-orange/20">
+                <h5 className="font-semibold text-soft-charcoal mb-3 flex items-center">
+                  <Mail className="mr-2 text-warm-orange" size={18} />
+                  Quick Registration
+                </h5>
+                <form onSubmit={handleQuickSignup} className="flex gap-3">
+                  <Input
+                    type="email"
+                    value={quickEmail}
+                    onChange={(e) => setQuickEmail(e.target.value)}
+                    placeholder="Enter your email for Zoom invite"
+                    className="flex-1 px-4 py-3 border-2 border-warm-orange/20 rounded-xl focus:ring-2 focus:ring-warm-orange focus:border-warm-orange transition-all duration-200 bg-white/90"
+                  />
+                  <Button
+                    type="submit"
+                    disabled={quickSignupMutation.isPending}
+                    className="gradient-warm text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50"
+                  >
+                    {quickSignupMutation.isPending ? (
+                      <Clock className="animate-spin" size={18} />
+                    ) : (
+                      <>
+                        <Mail className="mr-2" size={18} />
+                        Join Now
+                      </>
+                    )}
+                  </Button>
+                </form>
+              </div>
             </div>
           </motion.div>
           
