@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertMeetupSignupSchema, insertContactMessageSchema } from "@shared/schema";
 import { z } from "zod";
+import { sendMeetupWelcomeEmail, sendCommunityWelcomeEmail, sendStoryWelcomeEmail } from "./emailService";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Meetup signup endpoint
@@ -10,6 +11,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const signupData = insertMeetupSignupSchema.parse(req.body);
       const signup = await storage.createMeetupSignup(signupData);
+      
+      // Send welcome email
+      await sendMeetupWelcomeEmail(signupData.email);
+      
       res.json({ success: true, signup });
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -32,6 +37,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const messageData = insertContactMessageSchema.parse(req.body);
       const message = await storage.createContactMessage(messageData);
+      
+      // Send welcome email based on message type
+      if (messageData.message.toLowerCase().includes('community') || messageData.subject.toLowerCase().includes('join')) {
+        await sendCommunityWelcomeEmail(messageData.email);
+      } else if (messageData.message.toLowerCase().includes('story') || messageData.subject.toLowerCase().includes('story')) {
+        await sendStoryWelcomeEmail(messageData.email, messageData.name);
+      } else {
+        // For general inquiries, send community welcome
+        await sendCommunityWelcomeEmail(messageData.email);
+      }
+      
       res.json({ success: true, message });
     } catch (error) {
       if (error instanceof z.ZodError) {
