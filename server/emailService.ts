@@ -95,7 +95,7 @@ export const emailTemplates = {
             </div>
             
             <div class="quote">
-              <p>"You don't need to be intelligent or stupid, just simply be <strong>YOU</strong>. Every great product starts with a simple idea and the courage to build it."</p>
+              <p>"IQ doesn't matter. EQ doesn't either, simply be <strong>YOU</strong>. Just bring your vibe. Every great product starts with a simple idea and the courage to build it."</p>
             </div>
             
             <div class="message">

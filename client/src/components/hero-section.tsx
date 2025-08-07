@@ -28,7 +28,7 @@ export default function HeroSection() {
             </h1>
             
             <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-              You don't need to be intelligent or stupid, just simply be <strong>YOU</strong>. 
+              IQ doesn't matter. EQ doesn't either, simply be <strong>YOU</strong>. Just bring your vibe. 
               Let's explore new possibilities together over चाय <span className="text-sm">(chai)</span> और coffee.
             </p>
             
