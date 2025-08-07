@@ -65,11 +65,32 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Admin login endpoint
+  app.post("/api/admin/login", async (req, res) => {
+    try {
+      const { username, password } = req.body;
+      
+      if (username === "admin" && password === "ChaiCoffee123!") {
+        res.json({ success: true, message: "Login successful" });
+      } else {
+        res.status(401).json({ 
+          success: false, 
+          message: "Invalid credentials" 
+        });
+      }
+    } catch (error) {
+      res.status(500).json({ 
+        success: false, 
+        message: "Login failed" 
+      });
+    }
+  });
+
   // Get meetup signups (admin endpoint)
-  app.get("/api/meetup-signups", async (req, res) => {
+  app.get("/api/admin/meetup-signups", async (req, res) => {
     try {
       const signups = await storage.getMeetupSignups();
-      res.json({ success: true, signups });
+      res.json(signups);
     } catch (error) {
       res.status(500).json({ 
         success: false, 
@@ -79,10 +100,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Get contact messages (admin endpoint)
-  app.get("/api/contact-messages", async (req, res) => {
+  app.get("/api/admin/contact-messages", async (req, res) => {
     try {
       const messages = await storage.getContactMessages();
-      res.json({ success: true, messages });
+      res.json(messages);
     } catch (error) {
       res.status(500).json({ 
         success: false, 
