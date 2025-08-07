@@ -96,23 +96,17 @@ export default function Footer() {
           
           <div>
             <h4 className="font-semibold text-lg mb-4 text-warm-orange">About Founder</h4>
-            <div className="bg-gradient-to-br from-warm-orange/10 to-warm-teal/10 p-4 rounded-xl border border-warm-orange/20">
+            <div className="bg-gradient-to-br from-warm-orange/10 to-warm-teal/10 p-4 rounded-xl border border-warm-orange/20 hover:border-warm-orange/40 transition-all duration-300">
               <h5 className="font-semibold text-white mb-2">Sanjay Sahni</h5>
               <p className="text-sm text-gray-300 leading-relaxed mb-3">
-                Product Leader transforming organizations globally. Co-founder of Product Academy, 
-                helping startups and Fortune 500 companies achieve agile transformation.
+                Product Leader transforming organizations globally. Co-founder of Product Academy.
               </p>
-              <div className="text-xs text-gray-400 space-y-1 mb-3">
-                <p>• Wall Street veteran: HSBC, Morgan Stanley</p>
-                <p>• Transformed struggling startups to success</p>
-                <p>• Published author & corporate speaker</p>
-                <p>• Expert in building empowered teams</p>
-              </div>
-              <div className="pt-2 border-t border-warm-orange/20">
-                <p className="text-xs text-warm-orange font-medium italic">
-                  "Empowering unlimited potential through authentic connections"
-                </p>
-              </div>
+              <a 
+                href="/about-founder"
+                className="inline-flex items-center text-xs text-warm-orange hover:text-deep-coral font-medium transition-colors duration-200"
+              >
+                Read Full Story →
+              </a>
             </div>
           </div>
         </div>
