@@ -146,7 +146,7 @@ export default function MeetupSection() {
               />
             </div>
             
-            <div className="bg-gradient-to-br from-white to-warm-orange/5 p-8 rounded-3xl shadow-xl border border-warm-orange/20 hover:shadow-2xl transition-all duration-300">
+            <div className="bg-gradient-to-br from-warm-orange/10 via-golden-yellow/8 to-warm-teal/10 p-8 rounded-3xl shadow-xl border-2 border-warm-orange/30 hover:shadow-2xl hover:border-warm-orange/50 transition-all duration-300">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 gradient-warm rounded-full flex items-center justify-center shadow-lg">
@@ -157,40 +157,40 @@ export default function MeetupSection() {
                     <p className="text-sm text-warm-orange font-medium">Join our community गप-शप</p>
                   </div>
                 </div>
-                <div className="bg-gradient-to-r from-sage-green to-warm-teal text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
+                <div className="bg-gradient-to-r from-warm-orange to-deep-coral text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-pulse">
                   <Star className="inline mr-1" size={14} />
                   This Thursday
                 </div>
               </div>
               
               <div className="space-y-4 mb-6">
-                <div className="flex items-center bg-warm-orange/5 p-3 rounded-xl">
-                  <div className="w-8 h-8 bg-warm-orange/20 rounded-full flex items-center justify-center mr-3">
-                    <Calendar className="text-warm-orange" size={16} />
+                <div className="flex items-center bg-gradient-to-r from-warm-orange/15 to-deep-coral/10 p-4 rounded-xl border border-warm-orange/20 shadow-sm">
+                  <div className="w-10 h-10 bg-gradient-to-r from-warm-orange to-deep-coral rounded-full flex items-center justify-center mr-4 shadow-lg">
+                    <Calendar className="text-white" size={18} />
                   </div>
                   <div>
-                    <p className="font-semibold text-soft-charcoal">Thursday, August 21st</p>
-                    <p className="text-sm text-gray-600">3:00 PM - 4:00 PM</p>
+                    <p className="font-bold text-soft-charcoal text-lg">Thursday, August 21st</p>
+                    <p className="text-warm-orange font-semibold">3:00 PM - 4:00 PM</p>
                   </div>
                 </div>
                 
-                <div className="flex items-center bg-warm-teal/5 p-3 rounded-xl">
-                  <div className="w-8 h-8 bg-warm-teal/20 rounded-full flex items-center justify-center mr-3">
-                    <Video className="text-warm-teal" size={16} />
+                <div className="flex items-center bg-gradient-to-r from-warm-teal/15 to-sage-green/10 p-4 rounded-xl border border-warm-teal/20 shadow-sm">
+                  <div className="w-10 h-10 bg-gradient-to-r from-warm-teal to-sage-green rounded-full flex items-center justify-center mr-4 shadow-lg">
+                    <Video className="text-white" size={18} />
                   </div>
                   <div>
-                    <p className="font-semibold text-soft-charcoal">Online via Zoom</p>
-                    <p className="text-sm text-gray-600">Link shared after registration</p>
+                    <p className="font-bold text-soft-charcoal text-lg">Online via Zoom</p>
+                    <p className="text-warm-teal font-semibold">Link shared after registration</p>
                   </div>
                 </div>
                 
-                <div className="flex items-center bg-golden-yellow/5 p-3 rounded-xl">
-                  <div className="w-8 h-8 bg-golden-yellow/20 rounded-full flex items-center justify-center mr-3">
-                    <Coffee className="text-golden-yellow" size={16} />
+                <div className="flex items-center bg-gradient-to-r from-golden-yellow/15 to-sunshine/10 p-4 rounded-xl border border-golden-yellow/20 shadow-sm">
+                  <div className="w-10 h-10 bg-gradient-to-r from-golden-yellow to-sunshine rounded-full flex items-center justify-center mr-4 shadow-lg">
+                    <Coffee className="text-white" size={18} />
                   </div>
                   <div>
-                    <p className="font-semibold text-soft-charcoal">Bring Your Favorite Beverage</p>
-                    <p className="text-sm text-gray-600">Coffee, Tea, or anything that makes you comfortable</p>
+                    <p className="font-bold text-soft-charcoal text-lg">Bring Your Favorite Beverage</p>
+                    <p className="text-golden-yellow font-semibold">Coffee, Tea, or anything that makes you comfortable</p>
                   </div>
                 </div>
               </div>
