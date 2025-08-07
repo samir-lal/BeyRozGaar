@@ -10,6 +10,13 @@ export default function HeroSection() {
     }
   };
 
+  const scrollToStories = () => {
+    const element = document.getElementById('stories');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-warm-orange/10 via-golden-yellow/10 to-warm-teal/10"></div>
@@ -42,8 +49,9 @@ export default function HeroSection() {
               </Button>
               
               <Button 
+                onClick={scrollToStories}
                 variant="outline"
-                className="border-2 border-warm-orange text-warm-orange px-8 py-4 rounded-full font-semibold text-lg hover:bg-warm-orange hover:text-white transition-colors"
+                className="border-2 border-warm-orange text-warm-orange px-8 py-4 rounded-full font-semibold text-lg hover:bg-warm-orange hover:text-white transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
               >
                 <Play className="mr-2" size={20} />
                 Our Story
