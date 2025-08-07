@@ -156,7 +156,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
           >
             <h3 className="font-inter text-2xl font-bold mb-6 text-center">
-              Quick Message
+              Share Your Story
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
