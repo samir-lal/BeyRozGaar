@@ -225,7 +225,7 @@ export default function MeetupSection() {
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-warm-orange focus:border-warm-orange transition-colors" 
-                  placeholder="your@email.com - We'll send the Zoom link here" 
+                  placeholder="your@email.com" 
                   required
                 />
               </div>
