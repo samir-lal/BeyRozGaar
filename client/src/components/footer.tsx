@@ -20,7 +20,8 @@ export default function Footer() {
     { label: "Join Meetups", href: "#meetups" },
     { label: "Share Story", href: "#stories" },
     { label: "Guidelines", href: "#" },
-    { label: "Support", href: "#contact" }
+    { label: "Support", href: "#contact" },
+    { label: "US Job Analytics", href: "http://usjobanalytics.com", external: true, colored: true }
   ];
 
   const socialLinks = [
@@ -85,7 +86,9 @@ export default function Footer() {
                 <li key={link.label}>
                   <a 
                     href={link.href} 
-                    className="text-gray-300 hover:text-warm-orange transition-colors"
+                    className={link.colored ? "text-warm-teal hover:text-golden-yellow transition-colors font-medium" : "text-gray-300 hover:text-warm-orange transition-colors"}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
                   >
                     {link.label}
                   </a>
