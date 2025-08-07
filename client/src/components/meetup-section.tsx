@@ -77,7 +77,7 @@ export default function MeetupSection() {
     onSuccess: () => {
       toast({
         title: "You're registered! 🎉",
-        description: "We'll send you the Zoom link at the provided email address.",
+        description: "You will get an email soon with details to join the zoom meet.",
       });
       setQuickEmail("");
     },

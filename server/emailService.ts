@@ -297,7 +297,7 @@ export async function sendMeetupWelcomeEmail(email: string): Promise<boolean> {
   const template = emailTemplates.meetupWelcome(email);
   return sendEmail({
     to: email,
-    from: 'hello@beyrozgaar.com',
+    from: 'Sanjay Sahni <hello@beyrozgaar.com>',
     subject: template.subject,
     html: template.html
   });
@@ -307,7 +307,7 @@ export async function sendCommunityWelcomeEmail(email: string): Promise<boolean>
   const template = emailTemplates.communityWelcome(email);
   return sendEmail({
     to: email,
-    from: 'hello@beyrozgaar.com',
+    from: 'Sanjay Sahni <hello@beyrozgaar.com>',
     subject: template.subject,
     html: template.html
   });
@@ -317,7 +317,7 @@ export async function sendStoryWelcomeEmail(email: string, name?: string): Promi
   const template = emailTemplates.storyWelcome(email, name);
   return sendEmail({
     to: email,
-    from: 'hello@beyrozgaar.com',
+    from: 'Sanjay Sahni <hello@beyrozgaar.com>',
     subject: template.subject,
     html: template.html
   });
