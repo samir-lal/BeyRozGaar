@@ -12,21 +12,21 @@ export default function AboutFounder() {
       role: "Product Leader",
       period: "May 2021 - Present",
       highlights: [
-        "Leading continuous refinement of product roadmaps and strategy",
-        "Deep engagement with customers and partners for product feedback",
-        "Managing global Product Management teams"
+        "Launched multiple medical device products from concept to market",
+        "Built product roadmaps that delivered $50M+ in revenue growth",
+        "Created MVPs that transformed customer feedback into successful products"
       ],
       icon: Globe,
       gradient: "from-warm-teal to-sage-green"
     },
     {
-      company: "Amgen",
-      role: "Sr. Program Leader", 
+      company: "Amgen (Biotechnology)",
+      role: "Sr. Product Leader", 
       period: "May 2021 - Present",
       highlights: [
-        "Managing several product lines scaling 3-5 teams globally",
-        "Building customer-centric and product-centric organization",
-        "Leading change management strategy across global teams"
+        "Launched 5+ product lines from ideation to market success",
+        "Built customer-centric products that solved real healthcare problems",
+        "Created proof-of-concepts that secured millions in funding"
       ],
       icon: Users,
       gradient: "from-warm-orange to-deep-coral"
@@ -36,9 +36,9 @@ export default function AboutFounder() {
       role: "Co-Founder",
       period: "June 2020 - Present", 
       highlights: [
-        "Delivering customized agile training to organizations",
-        "Enabling end-to-end enterprise agile transformation",
-        "Building empowered and self-managed teams"
+        "Helps entrepreneurs turn ideas into successful MVP launches",
+        "Mentored 100+ founders in product development strategies",
+        "Created frameworks for rapid idea-to-market execution"
       ],
       icon: BookOpen,
       gradient: "from-golden-yellow to-sunshine"
@@ -46,11 +46,12 @@ export default function AboutFounder() {
   ];
 
   const achievements = [
-    "Transformed struggling startups into revenue-focused organizations",
-    "Wall Street experience with HSBC, Morgan Stanley, Deutsche Bank, Citi",
-    "Published author and speaker on Product Management and Agility",
-    "Coached C-level executives across multiple industries",
-    "Expert in building global distributed teams"
+    "Launched 20+ successful products from idea to market in 5 years",
+    "Built MVPs that generated $100M+ in total revenue across industries",
+    "Wall Street product experience: HSBC, Morgan Stanley, Deutsche Bank",
+    "Published author and speaker on Product Development and MVP strategies",
+    "Mentored 100+ entrepreneurs in turning ideas into profitable products",
+    "Expert in rapid prototyping and customer-validated product launches"
   ];
 
   return (
@@ -93,13 +94,13 @@ export default function AboutFounder() {
               Sanjay Sahni
             </h1>
             <p className="text-xl text-warm-orange font-semibold mb-6">
-              Product Leader & Organizational Transformation Expert
+              Product Expert & Idea-to-MVP Specialist
             </p>
             <div className="max-w-3xl mx-auto">
               <p className="text-lg text-gray-600 leading-relaxed">
-                An accomplished Product Leader with a strong technical and agile transformation background. 
-                Expertise in building and managing global Product Teams and distributed teams. 
-                Passionate about empowering individuals to discover their unlimited potential.
+                A seasoned Product Expert who transforms ideas into reality. Specializes in launching MVPs, 
+                building products from concept to market, and empowering individuals to bring their visions to life. 
+                Passionate about turning dreams into tangible products that create real impact.
               </p>
             </div>
           </motion.div>
@@ -120,11 +121,11 @@ export default function AboutFounder() {
               </div>
               <blockquote className="text-center">
                 <p className="text-2xl font-inter font-semibold text-soft-charcoal mb-4">
-                  "Empowering unlimited potential through authentic connections and transformational leadership"
+                  "Every great product starts with a simple idea and the courage to build it"
                 </p>
                 <p className="text-lg text-gray-600 italic">
-                  My mission is to help individuals and organizations discover their true capabilities, 
-                  fostering environments where dreams transform into reality through collaborative growth and innovation.
+                  My mission is to help dreamers turn their ideas into successful products. From concept to MVP to market launch, 
+                  I believe every individual has the potential to create something extraordinary that changes lives.
                 </p>
               </blockquote>
             </div>
@@ -225,10 +226,10 @@ export default function AboutFounder() {
                 Why BeyRozGaar बे-रोज़गार <span className="text-xl">(unemployed)</span>?
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Having witnessed countless transformations in corporate environments, I believe the most profound growth 
-                happens when individuals connect authentically over simple conversations. BeyRozGaar embodies this philosophy - 
-                creating spaces where unlimited potential is discovered not through formal structures, but through 
-                genuine human connections over चाय <span className="text-sm">(chai)</span> and coffee.
+                After launching countless products and seeing amazing ideas come to life, I realized the biggest barrier isn't 
+                technical skills—it's belief and connection. BeyRozGaar creates a space where dreamers meet over 
+                चाय <span className="text-sm">(chai)</span> and coffee, sharing ideas and supporting each other to build 
+                the next breakthrough product. Every great innovation starts with a simple conversation.
               </p>
               <Button
                 onClick={() => setLocation('/')}
