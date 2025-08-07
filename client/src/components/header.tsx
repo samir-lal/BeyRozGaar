@@ -30,7 +30,7 @@ export default function Header() {
             <button onClick={() => scrollToSection('home')} className="text-soft-charcoal hover:text-warm-orange transition-colors">Home</button>
             <button onClick={() => scrollToSection('about')} className="text-soft-charcoal hover:text-warm-orange transition-colors">About</button>
             <button onClick={() => scrollToSection('meetups')} className="text-soft-charcoal hover:text-warm-orange transition-colors">Meetups</button>
-            <button onClick={() => scrollToSection('stories')} className="text-soft-charcoal hover:text-warm-orange transition-colors">Stories</button>
+            <button onClick={() => scrollToSection('stories')} className="text-soft-charcoal hover:text-warm-orange transition-colors">Our Story</button>
             <button onClick={() => scrollToSection('contact')} className="text-soft-charcoal hover:text-warm-orange transition-colors">Contact</button>
           </div>
           
@@ -48,7 +48,7 @@ export default function Header() {
             <button onClick={() => scrollToSection('home')} className="block text-soft-charcoal hover:text-warm-orange transition-colors">Home</button>
             <button onClick={() => scrollToSection('about')} className="block text-soft-charcoal hover:text-warm-orange transition-colors">About</button>
             <button onClick={() => scrollToSection('meetups')} className="block text-soft-charcoal hover:text-warm-orange transition-colors">Meetups</button>
-            <button onClick={() => scrollToSection('stories')} className="block text-soft-charcoal hover:text-warm-orange transition-colors">Stories</button>
+            <button onClick={() => scrollToSection('stories')} className="block text-soft-charcoal hover:text-warm-orange transition-colors">Our Story</button>
             <button onClick={() => scrollToSection('contact')} className="block text-soft-charcoal hover:text-warm-orange transition-colors">Contact</button>
           </div>
         )}
