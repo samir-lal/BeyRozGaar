@@ -71,7 +71,7 @@ export default function HeroSection() {
             >
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-sage-green rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-soft-charcoal">500+ Community Members</span>
+                <span className="text-sm font-medium text-soft-charcoal">A Growing Tribe of Innovators and Explorers</span>
               </div>
             </motion.div>
             
