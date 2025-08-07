@@ -24,7 +24,7 @@ export default function HeroSection() {
           >
             <h1 className="font-inter text-4xl sm:text-5xl lg:text-6xl font-bold text-soft-charcoal mb-6 leading-tight">
               Your Dreams Are 
-              <span className="bg-gradient-to-r from-warm-orange to-deep-coral bg-clip-text text-transparent"> Unlimited</span>
+              <span className="bg-gradient-to-r from-warm-orange to-deep-coral bg-clip-text text-transparent font-extrabold"> Unlimited</span>
             </h1>
             
             <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
