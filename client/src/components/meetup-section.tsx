@@ -161,7 +161,7 @@ export default function MeetupSection() {
                   value={formData.phone}
                   onChange={(e) => handleInputChange('phone', e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-warm-orange focus:border-warm-orange transition-colors" 
-                  placeholder="+91 XXXXX XXXXX" 
+                  placeholder="+1 (XXX) XXX-XXXX" 
                 />
               </div>
               
