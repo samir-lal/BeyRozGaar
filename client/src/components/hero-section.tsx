@@ -82,8 +82,8 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <div className="text-center">
-                <div className="font-bold text-white text-xl">50+</div>
-                <div className="text-xs text-white">Weekly Meetups</div>
+                <div className="font-bold text-white text-xl">Curated</div>
+                <div className="text-xs text-white">Meetups</div>
               </div>
             </motion.div>
           </motion.div>
