@@ -102,7 +102,7 @@ export default function Footer() {
             <div className="bg-gradient-to-br from-warm-orange/10 to-warm-teal/10 p-4 rounded-xl border border-warm-orange/20 hover:border-warm-orange/40 transition-all duration-300">
               <h5 className="font-semibold text-white mb-2">Sanjay Sahni</h5>
               <p className="text-sm text-gray-300 leading-relaxed mb-3">
-                Product Leader transforming organizations globally. Co-founder of Product Academy.
+                Product Leader transforming organizations globally.
               </p>
               <a 
                 href="/about-founder"
