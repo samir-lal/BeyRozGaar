@@ -2,9 +2,20 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Users, Award, BookOpen, Globe, Heart, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLocation } from 'wouter';
+import { useEffect } from 'react';
 
 export default function AboutFounder() {
   const [, setLocation] = useLocation();
+
+  // SEO for About Founder page
+  useEffect(() => {
+    document.title = "About Sanjay Sahni - Product Expert & BeyRozGaar Founder";
+    
+    const existingDesc = document.querySelector('meta[name="description"]');
+    if (existingDesc) {
+      existingDesc.setAttribute('content', 'Learn about Sanjay Sahni, product expert with 15+ years experience launching $100M+ products. Founder of BeyRozGaar community platform helping unemployed individuals transform their careers.');
+    }
+  }, []);
 
   const serviceAreas = [
     {
