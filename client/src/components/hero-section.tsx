@@ -51,7 +51,7 @@ export default function HeroSection() {
               <Button 
                 onClick={scrollToStories}
                 variant="outline"
-                className="border-2 border-warm-orange text-warm-orange px-8 py-4 rounded-full font-semibold text-lg hover:bg-warm-orange hover:text-white transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+                className="border-2 border-warm-orange text-warm-orange px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-warm-orange transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
               >
                 <Play className="mr-2" size={20} />
                 Our Story
