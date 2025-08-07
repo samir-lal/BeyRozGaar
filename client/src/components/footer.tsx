@@ -86,7 +86,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a 
                     href={link.href} 
-                    className={link.colored ? "text-warm-teal hover:text-golden-yellow transition-colors font-medium" : "text-gray-300 hover:text-warm-orange transition-colors"}
+                    className={link.colored ? "text-golden-yellow hover:text-sunshine transition-colors font-medium" : "text-gray-300 hover:text-warm-orange transition-colors"}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noopener noreferrer" : undefined}
                   >
