@@ -157,7 +157,7 @@ export default function MeetupSection() {
                     <p className="text-sm text-warm-orange font-medium">Join our community गप-शप</p>
                   </div>
                 </div>
-                <div className="bg-gradient-to-r from-warm-orange to-deep-coral text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-pulse">
+                <div className="bg-warm-orange text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-pulse">
                   <Star className="inline mr-1" size={14} />
                   This Thursday
                 </div>
