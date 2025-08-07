@@ -70,7 +70,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { username, password } = req.body;
       
-      if (username === "admin" && password === "ChaiCoffee123!") {
+      const adminUsername = process.env.ADMIN_USERNAME || "admin";
+      const adminPassword = process.env.ADMIN_PASSWORD || "ChaiCoffee123!";
+      
+      if (username === adminUsername && password === adminPassword) {
         res.json({ success: true, message: "Login successful" });
       } else {
         res.status(401).json({ 
