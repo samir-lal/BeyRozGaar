@@ -159,7 +159,7 @@ export default function MeetupSection() {
                 </div>
                 <div className="bg-warm-orange text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-pulse">
                   <Star className="inline mr-1" size={14} />
-                  This Thursday
+                  Thursday
                 </div>
               </div>
               
